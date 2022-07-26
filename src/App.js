@@ -29,6 +29,7 @@ const App = () => {
     },
   ]);
   const [userName, setUserName] = useState("");
+  const [saveName, setSaveName] = useState("");
   const [hello, setHello] = useState("");
 
   const onChange = (e) => {
@@ -37,7 +38,8 @@ const App = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    setHello(`ㅎㅇㅎㅇ ${userName}`);
+    setHello(`${userName} 님의 할일 목록`);
+    setSaveName(userName);
   };
   const onInsertToggle = () => {
     if (selectedTodo) {
@@ -87,12 +89,17 @@ const App = () => {
   return (
     <div>
       <Template todoLength={todos.length} userName={userName}>
-        <Name
-          onChange={onChange}
-          userName={userName}
-          onSubmit={onSubmit}
-          hello={hello}
-        />
+        {saveName ? (
+          <div className="nameBox">{hello}</div>
+        ) : (
+          <Name
+            onChange={onChange}
+            userName={userName}
+            onSubmit={onSubmit}
+            hello={hello}
+          />
+        )}
+
         <TodoList
           todos={todos}
           onCheckToggle={onCheckToggle}

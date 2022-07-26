@@ -1,0 +1,40 @@
+.nameBox {
+  width: 90vw;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 0;
+  color: #6c567b;
+  font-size: 1.2rem;
+}
+
+.nameBox div {
+  color: #6c567b;
+  font-size: 1.4rem;
+}
+
+.nameBox form {
+  position: relative;
+}
+
+.nameBox input {
+  width: 100%;
+  border-radius: 30px;
+  padding: 5px;
+  margin-top: 20px;
+  border: 1px solid #6c567b;
+}
+
+.nameBox svg {
+  color: #6c567b;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.nameBox button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
